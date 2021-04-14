@@ -1,5 +1,7 @@
 # login-php-7-native
 
+# Admin LTE 3 Version
+
 tutorial instalasi menggunakan XAMPP
 
 1. download repository ini
@@ -13,7 +15,7 @@ tutorial instalasi menggunakan XAMPP
 
 # Akun Default
 
-1.  email: herayafpm@gmail.com
-    password: 123456
-2.  email: imp46@gmail.com
-    password: 12345
+1.  username: admin
+    password: admin123
+2.  username: heraya
+    password: heraya123
