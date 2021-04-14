@@ -3,6 +3,13 @@
 // biasanya jika dalam 1menit website tidak dibuka maka sesi akan berakhir
 // di sesi inilah email dan status sedang login disimpan
 session_start();
+// ini untuk mengecek apakah sudah login atau belum dengan mengecek kunci status di sesi
+if (!isset($_SESSION['status'])) {
+  // ini untuk menyimpan pesan kesalahan error ke sesi yang nantinya ditampilkan di halaman index.php
+  $_SESSION['error'] = 'Anda belum login';
+  // jika sudah maka lempar / redirect ke halaman index.php
+  header("location:../index.php");
+}
 ?>
 <!-- ini menggunakan framework css bootstrap v4.6.0 -->
 <!-- https://getbootstrap.com/docs/4.6/getting-started/introduction/ -->

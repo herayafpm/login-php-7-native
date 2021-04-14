@@ -3,6 +3,11 @@
 // biasanya jika dalam 1menit website tidak dibuka maka sesi akan berakhir
 // di sesi inilah email dan status sedang login disimpan
 session_start();
+// ini untuk mengecek apakah sudah login atau belum dengan mengecek isi kunci status di sesi
+if (isset($_SESSION['status']) && $_SESSION['status'] == 'login') {
+  // jika sudah maka lempar / redirect ke halaman admin/index.php
+  header("location:admin/index.php");
+}
 ?>
 <!-- ini menggunakan framework css bootstrap v4.6.0 -->
 <!-- https://getbootstrap.com/docs/4.6/getting-started/introduction/ -->
